@@ -1,0 +1,28 @@
+## Interface: 110002
+
+## Title: Long Plus [|cffeda55fMore Options Offered|r]
+## Title-zhCN: Long Plus [|cffeda55f提供更多设置项|r]
+## Title-zhTW: Long Plus [|cffeda55f提供更多設置項|r]
+
+## Notes: More Options Offered.
+## Notes-zhCN: 提供更多设置项
+## Notes-zhTW: 提供更多設置項
+
+## Version: 0.0.1
+## Author: BryantHe
+## SavedVariables: LongPlusDB
+## AddonCompartmentFunc: LongPlusGlobalMiniBtnClickFunc
+
+## IconTexture: Interface\HELPFRAME\ReportLagIcon-Movement
+
+## OptionalDeps: Leatrix Plus
+
+# ## X-Curse-Project-ID: 
+
+# Author Email: bryantsisu@gmail.com
+# Author Github: https://github.com/Bryanthelol
+
+LongPlusLib.lua
+LongPlusLocale.lua
+
+LongPlus.lua
