@@ -41,6 +41,10 @@ local function eventHandler(self, event, arg1, arg2, ...)
         if arg1 == "LongPlus" then
             -- Friendly Nameplate Health Bar
             LongPlusLC:LoadVarChk("FriendlyNameplateHealthBar", "On")
+            -- Friendly Nameplate Width
+            LongPlusLC:LoadVarNum("FriendlyNameplateWidth", 154, 24, 154)
+            -- Friendly Nameplate Y-axis Offset
+            LongPlusLC:LoadVarNum("FriendlyNameplateYAxisOffset", 1, -35, 1)
 
             -- Panel position
             LongPlusLC:LoadVarAnc("MainPanelA", "CENTER")       -- Panel anchor
@@ -70,6 +74,10 @@ local function eventHandler(self, event, arg1, arg2, ...)
 
         -- Friendly Nameplate Health Bar
         LongPlusDB["FriendlyNameplateHealthBar"] = LongPlusLC["FriendlyNameplateHealthBar"]
+        -- Friendly Nameplate Width
+        LongPlusDB["FriendlyNameplateWidth"] = LongPlusLC["FriendlyNameplateWidth"]
+        -- Friendly Nameplate Y-axis Offset
+        LongPlusDB["FriendlyNameplateYAxisOffset"] = LongPlusLC["FriendlyNameplateYAxisOffset"]
         
         -- Panel position
         LongPlusDB["MainPanelA"] = LongPlusLC["MainPanelA"]
@@ -153,6 +161,32 @@ function LongPlusLC:Player()
         if LongPlusLC["FriendlyNameplateHealthBar"] == "On" then
             NameplateShowOnlyNames()
         end
+    end
+
+    ----------------------------------------------------------------------
+    -- Friendly Nameplate Width
+    ----------------------------------------------------------------------
+    do
+        local function NameplateAdjustWidth()
+            C_Timer.After(0.1,function() -- 延迟设置，否则被重置
+                C_NamePlate.SetNamePlateFriendlySize(LongPlusLC["FriendlyNameplateWidth"], LongPlusLC["FriendlyNameplateYAxisOffset"])
+            end)
+        end
+        LongPlusCB["FriendlyNameplateWidth"]:HookScript("OnValueChanged", NameplateAdjustWidth)
+        NameplateAdjustWidth()
+    end
+
+    ----------------------------------------------------------------------
+    -- Friendly Nameplate Y-axis Offset
+    ----------------------------------------------------------------------
+    do
+        local function NameplateAdjustXAxisOffset()
+            C_Timer.After(0.1,function() -- 延迟设置，否则被重置
+                C_NamePlate.SetNamePlateFriendlySize(LongPlusLC["FriendlyNameplateWidth"], LongPlusLC["FriendlyNameplateYAxisOffset"])
+            end)
+        end
+        LongPlusCB["FriendlyNameplateYAxisOffset"]:HookScript("OnValueChanged", NameplateAdjustXAxisOffset)
+        NameplateAdjustXAxisOffset()
     end
 
     ----------------------------------------------------------------------
@@ -621,7 +655,7 @@ end
 function LongPlusLC:MakeSL(frame, field, caption, low, high, step, x, y, form)
     -- Create slider control
     local Slider = CreateFrame("Slider", nil, frame, "UISliderTemplate")
-    LongPlusLC[field] = Slider
+    LongPlusCB[field] = Slider
     Slider:SetMinMaxValues(low, high)
     Slider:SetValueStep(step)
     Slider:EnableMouseWheel(true)
@@ -933,5 +967,7 @@ LongPlusLC:MakeTx(LongPlusLC[pg], "Friendly Nameplate Health Bar", 146, -72)
 LongPlusLC:MakeCB(LongPlusLC[pg], "FriendlyNameplateHealthBar", "Hide Friendly Unit Health Bar", 146, -92, true, "Health bars will only be displayed for targetable enemies.")
 
 LongPlusLC:MakeTx(LongPlusLC[pg], "Friendly Nameplate Width", 340, -72)
-LongPlusLC:MakeSL(LongPlusLC[pg], "PlusPanelScale", "Drag to set the width of friendly nameplate.", 1, 2, 0.1, 340, -92, "%.1f")
+LongPlusLC:MakeSL(LongPlusLC[pg], "FriendlyNameplateWidth", "Drag to set the width of friendly nameplates. If you have installed other nameplate addons, it may cause conflicts.", 24, 154, 1, 340, -92, "%.0f")
 
+LongPlusLC:MakeTx(LongPlusLC[pg], "Friendly Nameplate Y-axis Offset", 340, -132)
+LongPlusLC:MakeSL(LongPlusLC[pg], "FriendlyNameplateYAxisOffset", "Drag to set the Y-axis of friendly nameplates (based on the character model). If you have installed other nameplate addons, it may cause conflicts.", -35, 1, 1, 340, -152, "%.0f")
