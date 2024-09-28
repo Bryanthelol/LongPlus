@@ -10,15 +10,13 @@
 
 ## Version: 0.1.1
 ## Author: BryantHe
+## IconTexture: Interface\AddOns\LongPlus\LongPlusIcon.png
 ## SavedVariables: LongPlusDB
 ## AddonCompartmentFunc: LongPlusGlobalMiniBtnClickFunc
 
 ## IconTexture: Interface\HELPFRAME\ReportLagIcon-Movement
 
-# ## X-Curse-Project-ID: 
-
-# Author Email: bryantsisu@gmail.com
-# Author Github: https://github.com/Bryanthelol
+## X-Curse-Project-ID: 1110897
 
 # Credits to to Leatrix Plus
 
