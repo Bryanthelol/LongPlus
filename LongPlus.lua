@@ -145,6 +145,8 @@ end
 --	Player
 ----------------------------------------------------------------------
 function LongPlusLC:Player()
+    -- TODO 1. 添加斩杀线  2. 友方队友箭头
+    -- BUG 1. 隐藏队友血条的开关在团队副本内无效
 
     ----------------------------------------------------------------------
     -- Friendly Nameplate Health Bar
@@ -300,6 +302,7 @@ hooksecurefunc("CompactUnitFrame_UpdateWidgetsOnlyMode", function(frame)
     if not frame then return end
     if frame:IsForbidden() then return end
     if UnitIsUnit(frame.unit,"player") then return end
+    if not UnitIsPlayer(frame.unit) then return end
     if not string.match(frame.unit,"nameplate") then return end
     CompactUnitFrame_SetHideHealth(frame, not UnitCanAttack("player",frame.unit), 1)
 end)
