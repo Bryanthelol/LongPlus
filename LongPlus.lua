@@ -232,7 +232,7 @@ function LongPlusLC:Player()
         local miniButton = LibStub("LibDataBroker-1.1"):NewDataObject("Long_Plus", {
             type = "data source",
             text = "Long Plus",
-            icon = "Interface\\HELPFRAME\\ReportLagIcon-Movement",
+            icon = "Interface\\AddOns\\LongPlus\\LongPlusIcon.png",
             OnClick = function(self, btn)
                 MiniBtnClickFunc(btn)
             end,
