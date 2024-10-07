@@ -1,4 +1,4 @@
---	Long Plus 0.0.1
+--	Long Plus
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -17,7 +17,7 @@ local GameLocale = GetLocale()
 local void
 
 -- Version
-LongPlusLC["AddonVer"] = "0.0.1"
+LongPlusLC["AddonVer"] = "0.1.3"
 
 -- Get locale table
 local void, Long_Plus = ...
@@ -971,4 +971,4 @@ LongPlusLC:MakeTx(LongPlusLC[pg], "Friendly Nameplate Width", 340, -72)
 LongPlusLC:MakeSL(LongPlusLC[pg], "FriendlyNameplateWidth", "Drag to set the width of friendly nameplates. If you have installed other nameplate addons, it may cause conflicts.", 24, 154, 1, 340, -92, "%.0f")
 
 LongPlusLC:MakeTx(LongPlusLC[pg], "Friendly Nameplate Y-axis Offset", 340, -132)
-LongPlusLC:MakeSL(LongPlusLC[pg], "FriendlyNameplateYAxisOffset", "Drag to set the Y-axis of friendly nameplates (based on the character model). If you have installed other nameplate addons, it may cause conflicts.", -35, 1, 1, 340, -152, "%.0f")
+LongPlusLC:MakeSL(LongPlusLC[pg], "FriendlyNameplateYAxisOffset", "Drag to set the height of friendly nameplates (based on character model). When the value is less than 1, friendly nameplates do not stack. If you have installed other nameplate addons, it may cause conflicts.", -35, 1, 1, 340, -152, "%.0f")

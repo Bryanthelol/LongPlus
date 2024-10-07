@@ -25,5 +25,5 @@ if GameLocale == "zhCN" then
     L["Friendly Nameplate Width"] = "友方姓名板宽度"
     L["Drag to set the width of friendly nameplates. If you have installed other nameplate addons, it may cause conflicts."] = "拖动以设置友方姓名板的宽度。如果您安装了其他姓名板插件，可能会导致冲突。"
     L["Friendly Nameplate Y-axis Offset"] = "友方姓名板 Y 轴偏移值"
-    L["Drag to set the Y axis of friendly nameplates (based on the character model). Stacking of friendly nameplates is disabled when the value is less than 1. If you have installed other nameplate addons, it may cause conflicts."] = "拖动以设置友方姓名板的 Y 轴（基于人物模型）。小于 1 时友方不堆叠。如果您安装了其他姓名板插件，可能会导致冲突。"
+    L["Drag to set the height of friendly nameplates (based on character model). When the value is less than 1, friendly nameplates do not stack. If you have installed other nameplate addons, it may cause conflicts."] = "拖动以设置友方姓名板的高度（基于人物模型）。数值小于 1 时友方姓名板不堆叠。如果您安装了其他姓名板插件，可能会导致冲突。"
 end

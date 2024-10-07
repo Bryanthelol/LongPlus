@@ -8,7 +8,7 @@
 ## Notes-zhCN: 提供更多设置项
 ## Notes-zhTW: 提供更多設置項
 
-## Version: 0.1.1
+## Version: 0.1.3
 ## Author: BryantHe
 ## IconTexture: Interface\AddOns\LongPlus\LongPlusIcon.png
 ## SavedVariables: LongPlusDB

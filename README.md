@@ -1,16 +1,26 @@
 # Long Plus
-an addon of WoW for options augmentation (Credits to to Leatrix Plus)
+An addon of WoW for options augmentation (Credits to to Leatrix Plus)
 
 ## Features
 
+### Nameplate
+
 1. Show/Hide friendly nameplates.
-2. Change the width and Y-axis position of friendly nameplates.
+2. Change the width and height of friendly nameplates.
 
 ## How to use
 
 Click the minimap button to open Long Plus.
 
 # ChangLog
+
+## v0.1.3
+
+Bug fixes
+
+## v0.1.2
+
+Add icon and license
 
 ## v0.1.1
 
@@ -25,7 +35,6 @@ Bug fixes:
 
 # TODO Features
 
-
-# Plan
+1. PVP Scroe
 
 
