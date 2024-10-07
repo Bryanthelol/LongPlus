@@ -17,7 +17,7 @@ local GameLocale = GetLocale()
 local void
 
 -- Version
-LongPlusLC["AddonVer"] = "0.1.3"
+LongPlusLC["AddonVer"] = "0.1.4"
 
 -- Get locale table
 local void, Long_Plus = ...
@@ -40,7 +40,7 @@ local function eventHandler(self, event, arg1, arg2, ...)
     if event == "ADDON_LOADED" then
         if arg1 == "LongPlus" then
             -- Friendly Nameplate Health Bar
-            LongPlusLC:LoadVarChk("FriendlyNameplateHealthBar", "On")
+            LongPlusLC:LoadVarChk("FriendlyNameplateHealthBar", "Off")
             -- Friendly Nameplate Width
             LongPlusLC:LoadVarNum("FriendlyNameplateWidth", 154, 24, 154)
             -- Friendly Nameplate Y-axis Offset
@@ -117,7 +117,7 @@ end
 
 --	Set lock state for configuration buttons
 function LongPlusLC:SetDim()
-    -- LongPlusLC:LockOption("AutoSellJunk", "AutoSellJunkBtn", true)                -- Sell junk automatically
+
 end
 
 ----------------------------------------------------------------------

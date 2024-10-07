@@ -14,6 +14,10 @@ Click the minimap button to open Long Plus.
 
 # ChangLog
 
+## v0.1.4
+
+change the default setting of friendly unit health bar
+
 ## v0.1.3
 
 Bug fixes
